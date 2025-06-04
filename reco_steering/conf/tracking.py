@@ -246,7 +246,7 @@ FilterTracksCone.Parameters = {
     "OutputTrackCollectionName": [ TRK_FILTER_c ],
     "NNmethod": [""],
     #"NNmethod": ["BDT::BDTG"],
-    "NNweights": [""],
+    "NNweights": ["/users/muoncollider/zuliani/EUstrat/mucoll-benchmarks/analysis/physics_performance/dataset/H_weights/TMVAClassification_BDTG.weights.xml"],
     # supported variables are: trtvhn, trtihn, trtohn, trthn, trtnh, trch2, trndf
     "NNvars": ["trtihn", "trtohn", "trtvhn", "trch2", "trndf"],
     "NNthr": ["0.09"]

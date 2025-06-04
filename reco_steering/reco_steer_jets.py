@@ -462,9 +462,10 @@ MyJetAnalyzer.ProcessorType = "JetAnalyzer"
 MyJetAnalyzer.Parameters = {
                             "GenJetCollection": ["GenJet_VLC"],
                             "MCParticleCollectionName": ["MCParticle"],
-                            "OutputRootFileName": ["quarks.root"],
+                            "OutputRootFileName": ["tuples.root"],
                             "RECOParticleCollectionName": ["PandoraPFOs"],
                             "ProcessName": ["dijet"],
+                            #"RecoJetCollection": ["JetOut_kt"],
                             "RecoJetCollection": ["BuildUpVertices_RP"],
                             "doDiBosonChecks": ["false"],
                             "fillMEInfo": ["true"]
@@ -516,6 +517,10 @@ algList.append(PFOSelection_jets)
 
 # Jet
 algList.append(FastJetProcessor_kt)
+#algList.append(JET_kt_LCTuple)
+#algList.append(MyTrueMCintoRecoForJets)
+#algList.append(MyFastGenJetProcessor)
+#algList.append(MyJetAnalyzer)
 
 # Cone tracking
 algList.append(FilterHitsJets)
@@ -529,12 +534,15 @@ algList.append(TrkToPFOConverter)
 algList.append(VertexFinder)
 
 # root tuple
-algList.append(BUVertices)
-algList.append(TrueJets)
+#algList.append(MyLCTuple)
+#algList.append(PrimaryVertices)
+#algList.append(BUVertices)
 
 algList.append(MyTrueMCintoRecoForJets)
 algList.append(MyFastGenJetProcessor)
 algList.append(MyJetAnalyzer)
+algList.append(BUVertices)
+algList.append(TrueJets)
 
 # Output
 #algList.append(LCIOWriter_all)

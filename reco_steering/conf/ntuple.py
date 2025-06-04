@@ -12,6 +12,7 @@ MyLCTuple.Parameters = {
     "ClusterCollection": [""],
     "FullSubsetCollections": [],
     "IsoLepCollection": [],
+    #"JetCollection": ["JetOut_kt"],
     "JetCollection": ["FakeRemovedJets"],
     "JetCollectionDaughtersParameters": ["true"],
     "JetCollectionExtraParameters": ["false"],
@@ -49,6 +50,7 @@ PrimaryVertices = MarlinProcessorWrapper("PrimaryVertices")
 PrimaryVertices.OutputLevel = DEBUG
 PrimaryVertices.ProcessorType = "LCTuple"
 PrimaryVertices.Parameters = {
+    #"RecoParticleCollection": [ "PrimaryVertices_RP" ],
     "JetCollection": ["PrimaryVertices_RP"],
     "JetCollectionDaughtersParameters": ["true"],
     "JetCollectionExtraParameters": ["false"],
@@ -60,6 +62,7 @@ BUVertices = MarlinProcessorWrapper("BUVertices")
 BUVertices.OutputLevel = DEBUG
 BUVertices.ProcessorType = "LCTuple"
 BUVertices.Parameters = {
+    #"RecoParticleCollection": [ "BuildUpVertices_RP" ],
     "JetCollection": ["BuildUpVertices_RP"],
     "WriteJetCollectionParameters": ["true"],
     "JetCollectionDaughtersParameters": ["true"],
@@ -73,6 +76,7 @@ TrueJets.OutputLevel = DEBUG
 TrueJets.ProcessorType = "LCTuple"
 TrueJets.Parameters = {
     "JetCollection": ["GenJet_VLC"],
+    "WriteJetCollectionParameters": ["true"],
     "JetCollectionDaughtersParameters": ["true"],
     "JetCollectionExtraParameters": ["false"],
     "JetCollectionTaggingParameters": ["false"],
